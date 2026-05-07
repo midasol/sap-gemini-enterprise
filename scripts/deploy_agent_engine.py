@@ -27,7 +27,7 @@ def parse_args():
     parser.add_argument(
         "--project",
         required=True,
-        help="GCP project ID (e.g. sap-advanced-workshop-gck)",
+        help="GCP project ID",
     )
     parser.add_argument(
         "--update",
