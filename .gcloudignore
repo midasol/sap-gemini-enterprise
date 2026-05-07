@@ -1,0 +1,49 @@
+# =============================================================================
+# Cloud Build Ignore File
+# =============================================================================
+# Only exclude non-essential files to minimize upload size
+
+# Git (not needed for Docker build)
+.git/
+.gitignore
+.gitattributes
+
+# Virtual environments (large, not needed - will be created in Docker)
+.venv/
+venv/
+
+# Python bytecode (will be regenerated)
+__pycache__/
+*.pyc
+*.pyo
+
+# IDE settings
+.idea/
+.vscode/
+
+# Test artifacts
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local environment files (secrets - DO NOT upload)
+.env
+.env.*
+!.env.example
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Serena MCP
+.serena/
+
+# Documentation files (not needed for build)
+CODE_REVIEW.md
+DEPLOYMENT_PLAN.md
+
+# Node modules (if any)
+node_modules/
+
+# uv lock file
+uv.lock
