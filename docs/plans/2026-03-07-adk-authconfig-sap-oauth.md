@@ -552,8 +552,8 @@ grep "ADK" sap_agent.log
 
 ```bash
 .venv/bin/python scripts/deploy_agent_engine.py \
-  --project sap-advanced-workshop-gck \
-  --update projects/110191959938/locations/us-central1/reasoningEngines/5195208933916016640
+  --project <YOUR_PROJECT_ID> \
+  --update <AGENT_ENGINE_RESOURCE_NAME>
 ```
 
 **Step 2: Test via Gemini Enterprise**
@@ -568,7 +568,7 @@ grep "ADK" sap_agent.log
 ```bash
 gcloud logging read \
   'resource.type="aiplatform.googleapis.com/ReasoningEngine" AND "ADK auth"' \
-  --project=sap-advanced-workshop-gck --limit=20 --freshness=1h \
+  --project=<YOUR_PROJECT_ID> --limit=20 --freshness=1h \
   --format="table(timestamp,textPayload)"
 ```
 
